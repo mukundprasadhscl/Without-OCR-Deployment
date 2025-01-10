@@ -6,6 +6,5 @@ python-dotenv
 Pillow
 langchain
 reportlab
-easyocr
-pymupdf
+
 
