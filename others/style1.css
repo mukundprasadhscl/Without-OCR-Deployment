@@ -1,0 +1,257 @@
+#resume-formatter-cl-v12 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            color: #D5292B;
+            text-align: center;
+            padding: 10px;
+        }
+.custom-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+               /* Page Background */
+        body {
+            background-color: #F1F1F1;
+            font-family: 'Quicksand';
+        }
+
+        /* Heading Styles */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2C4B84;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Quicksand';
+        }
+
+        /* Normal Text */
+        p, div {
+            color: #000929;
+            font-size: 14px;
+            font-family: 'Quicksand';
+        }
+
+        /* Lighter Text */
+        span, small {
+            color: #6C727F;
+            font-size: 14px;
+            font-family: 'Quicksand';
+        }
+
+        html * {
+        font-weight: 700 !important; /* Force bold on all elements */
+    }
+
+    /* Global text color, excluding buttons */
+    html *:not(button):not(.stButton button) {
+        font-weight: 700 !important;
+    }
+    button, .stButton button {
+    background-color: #D5292B !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-family: 'Quicksand', sans-serif !important;
+    color: white !important;
+
+    /* Add these specific overrides */
+    color: white !important;
+    text-color: white !important;
+}
+
+button:hover, .stButton button:hover {
+    background-color: #B22224 !important;
+    color: white !important;
+}
+
+/* Optional: Ensure Streamlit buttons are also white */
+.stButton button * {
+    color: white !important;
+}
+/* Target Streamlit download buttons */
+.stDownloadButton > button,
+.stDownloadButton > button * {
+    color: white !important;
+    text-color: white !important;
+}
+
+.stDownloadButton > button {
+    background-color: #D5292B !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+.stDownloadButton > button:hover {
+    background-color: #B22224 !important;
+}
+/* Tabs Styling */
+div[data-testid="stTabs"] button {
+    color: #2C4B84;  /* Blue text color */
+    background-color: white !important;  /* White background */
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Quicksand';
+}
+
+div[data-testid="stTabs"] button:hover {
+    background-color: #F0F0F0 !important;  /* Light gray background on hover */
+    color: #2C4B84 !important;
+}
+
+div[data-testid="stTabs"] button[data-baseweb="tab"]:not(:first-child) {
+    margin-left: 10px;  /* Optional: Add some spacing between tabs */
+}
+
+div[data-testid="stTabs"] .stMarkdown-container {
+    font-family: 'Quicksand';
+}
+/* Existing button styles */
+button, .stButton button {
+    background-color: #D5292B !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-family: 'Quicksand', sans-serif !important;
+    color: white !important;
+}
+
+button:hover, .stButton button:hover {
+    background-color: #B22224 !important;
+    color: white !important;
+}
+
+/* Additional selector to catch more Streamlit buttons */
+.stButton > button,
+div[data-testid="stButton"] > button {
+    background-color: #D5292B !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-family: 'Quicksand', sans-serif !important;
+    color: white !important;
+}
+
+div[data-testid="stButton"] > button:hover {
+    background-color: #B22224 !important;
+    color: white !important;
+}
+    /* Maintain bold styling on headings */
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700 !important;
+    }
+
+        /* Sidebar Styling */
+        section[data-testid="stSidebar"] {
+            background-color: #FAFAFA;
+        }
+
+        /* Input and Text Areas */
+        textarea, input, .stTextInput {
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: 'Quicksand';
+        }
+
+        /* Tabs Styling */
+        div[data-testid="stTabs"] button {
+            color: #2C4B84;
+            font-weight: 500;
+            font-size: 14px;
+            font-family: 'Quicksand';
+        }
+
+        /* Titles within Tabs */
+        div[data-testid="stTabs"] h2 {
+            font-size: 14px;
+            color: #2C4B84;
+            font-weight: 700;
+            font-family: 'Quicksand';
+        }
+        /* Logo Styling */
+        .logo-container {
+            position: absolute;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Title Styling */
+        .page-title {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0;
+            font-size: 1.8rem;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Adjust main content to account for fixed header */
+        .main-content {
+        margin-top: 0px; /* Reduce empty space */
+        padding: 0 10px;  /* Optional: Add some horizontal padding */
+        }
+
+        /* Sidebar Adjustment */
+        /* Target Streamlit's sidebar container */
+        section[data-testid="stSidebar"] {
+            top: 70px; /* Match the header height */
+            position: fixed;
+            height: calc(100vh - 70px); /* Adjust height to fill remaining viewport */
+            overflow-y: auto; /* Allow scrolling if content is long */
+        }
+        section[data-testid="stSidebar"] * {
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 14px !important;
+}
+
+/* Ensure headings in sidebar also follow Quicksand styling */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] h4,
+section[data-testid="stSidebar"] h5,
+section[data-testid="stSidebar"] h6 {
+    font-family: 'Quicksand', sans-serif !important;
+    color: #2C4B84 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+/* Specific targeting for different sidebar elements */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] div,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label {
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 14px !important;
+    color: #000929 !important;
+}
+        /* Adjust the main content area */
+        section[data-testid="stAppViewContainer"] {
+            margin-top: 70px; /* Match the header height */
+        }
+       [data-testid="stSidebarCollapsedControl"] {
+            position: absolute;
+            top: 80px; /* Adjust based on your header height */
+            left: 10px; /* Ensure it doesn't overlap the logo */
+            z-index: 500; /* Keep it above other elements */
+        }
+
+
+        /* Hide Streamlit default elements */
+        #MainMenu {visibility: hidden;}
+        header {visibility: hidden;}
+        footer {visibility: hidden;}
